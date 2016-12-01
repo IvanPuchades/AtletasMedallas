@@ -12,14 +12,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class MedallaService {
 
-    @Autowired
-    private MedallaRepository
+   // @Autowired
+   // private MedallaRepository
 
-    @Autowired
-    private AtletaRepository
+   // @Autowired
+   // private AtletaRepository
 
     public void testMedallas(){
 
-        
+
     }
 }
