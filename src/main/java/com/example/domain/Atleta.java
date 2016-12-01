@@ -16,14 +16,16 @@ public class Atleta {
     private String apellido;
     private String nacionalidad;
     private LocalDate fechaNacimiento;
+    @OneToMany
+    private Medalla medalla;
 
-
-    public Atleta(Long id, String nombre, String apellido, String nacionalidad, LocalDate fechaNacimiento) {
+    public Atleta(Long id, String nombre, String apellido, String nacionalidad, LocalDate fechaNacimiento, Medalla medalla) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.nacionalidad = nacionalidad;
         this.fechaNacimiento = fechaNacimiento;
+        this.medalla = medalla;
     }
 //Constructor vacio
     public Atleta() {
@@ -49,6 +51,10 @@ public class Atleta {
         return fechaNacimiento;
     }
 
+    public Medalla getMedalla() {
+        return medalla;
+    }
+
     //Setters
     public void setId(Long id) {
         this.id = id;
@@ -69,8 +75,11 @@ public class Atleta {
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-    //To String()
 
+    public void setMedalla(Medalla medalla) {
+        this.medalla = medalla;
+    }
+    //To String()
 
     @Override
     public String toString() {
@@ -80,7 +89,7 @@ public class Atleta {
                 ", apellido='" + apellido + '\'' +
                 ", nacionalidad='" + nacionalidad + '\'' +
                 ", fechaNacimiento=" + fechaNacimiento +
+                ", medalla=" + medalla +
                 '}';
     }
-
 }

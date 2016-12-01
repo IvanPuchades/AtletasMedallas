@@ -16,15 +16,13 @@ public class Medalla {
     private int enumeracion;
     private String especialidad;
     private String competicion;
-    @ManyToOne
-    private Atleta atleta;
 
     //Constructor
-    public Medalla(int enumeracion, String especialidad, String competicion, Atleta atleta) {
+    public Medalla(int enumeracion, String especialidad, String competicion) {
         this.enumeracion = enumeracion;
         this.especialidad = especialidad;
         this.competicion = competicion;
-        this.atleta = atleta;
+
     }
 
     public Medalla() {
@@ -48,9 +46,7 @@ public class Medalla {
         return competicion;
     }
 
-    public Atleta getAtleta() {
-        return atleta;
-    }
+
 
     //Setters
 
@@ -70,9 +66,7 @@ public class Medalla {
         this.competicion = competicion;
     }
 
-    public void setAtleta(Atleta atleta) {
-        this.atleta = atleta;
-    }
+
 
     @Override
     public String toString() {
@@ -81,7 +75,6 @@ public class Medalla {
                 ", enumeracion=" + enumeracion +
                 ", especialidad='" + especialidad + '\'' +
                 ", competicion='" + competicion + '\'' +
-                ", atleta=" + atleta +
                 '}';
     }
 }
