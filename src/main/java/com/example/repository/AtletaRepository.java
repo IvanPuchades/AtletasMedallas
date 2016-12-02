@@ -1,7 +1,10 @@
 package com.example.repository;
 
+import com.example.domain.Atleta;
+import org.springframework.data.jpa.repository.JpaRepository;
+
 /**
  * Created by dam on 1/12/16.
  */
-public class AtletaRepository {
+public interface AtletaRepository extends JpaRepository<Atleta,Long> {
 }
