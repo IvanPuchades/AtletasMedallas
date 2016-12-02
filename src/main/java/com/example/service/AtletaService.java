@@ -16,8 +16,13 @@ public class AtletaService {
     private AtletaRepository atletaRepository;
 
     public void testAtletas(){
-        Atleta atleta1 = new Atleta(1,"Ivan","Puchades","Española", LocalDate.of(1995,29,11));
-        AtletaRepository.save(atleta1);
+        Atleta atleta1 = new Atleta(1,"Ivan","Puchades","Española", LocalDate.of(1995,10,11), "Oro");
+        atletaRepository.save(atleta1);
+        Atleta atleta2 = new Atleta(2, "ChaoJun", "Chao", "China", LocalDate.of(1997,4,10), "Bronce");
+        atletaRepository.save(atleta2);
+        Atleta atleta3 = new Atleta(3, "Raul", "Vazquez", "Italiano", LocalDate.of(1996, 12, 1));
+        atletaRepository.save(atleta3);
+
     }
 
 

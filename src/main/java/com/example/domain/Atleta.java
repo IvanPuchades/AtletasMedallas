@@ -19,13 +19,12 @@ public class Atleta {
     @OneToMany
     private Medalla medalla;
 
-    public Atleta(Long id, String nombre, String apellido, String nacionalidad, LocalDate fechaNacimiento, Medalla medalla) {
+    public Atleta(Long id, String nombre, String apellido, String nacionalidad, LocalDate fechaNacimiento) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.nacionalidad = nacionalidad;
         this.fechaNacimiento = fechaNacimiento;
-        this.medalla = medalla;
     }
 //Constructor vacio
     public Atleta() {
@@ -89,7 +88,6 @@ public class Atleta {
                 ", apellido='" + apellido + '\'' +
                 ", nacionalidad='" + nacionalidad + '\'' +
                 ", fechaNacimiento=" + fechaNacimiento +
-                ", medalla=" + medalla +
                 '}';
     }
 }
