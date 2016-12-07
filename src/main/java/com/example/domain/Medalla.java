@@ -23,7 +23,7 @@ public class Medalla {
     }
 
     //Constructor
-    public Medalla(int enumeracion, String especialidad, String competicion) {
+    public Medalla(TipoMedalla tipoMedalla, int enumeracion, String especialidad, String competicion) {
         this.tipoMedalla = tipoMedalla;
         this.especialidad = especialidad;
         this.competicion = competicion;

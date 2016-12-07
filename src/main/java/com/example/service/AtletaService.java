@@ -2,6 +2,7 @@ package com.example.service;
 
 import com.example.domain.Atleta;
 import com.example.repository.AtletaRepository;
+import com.example.repository.MedallaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,9 @@ import java.time.LocalDate;
 public class AtletaService {
     @Autowired
     private AtletaRepository atletaRepository;
+
+    @Autowired
+    private MedallaRepository medallaRepository;
 
     public void crearAtletas(){
         Atleta atleta1 = new Atleta("Ivan","Puchades","Española", LocalDate.of(1995,10,11));
