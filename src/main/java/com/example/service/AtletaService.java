@@ -22,15 +22,15 @@ public class AtletaService {
     public void crearAtletas(){
         Atleta atleta1 = new Atleta("Ivan","Puchades","Española", LocalDate.of(1995,10,11));
         atletaRepository.save(atleta1);
-        Atleta atleta2 = new Atleta("ChaoJun", "Chao", "China", LocalDate.of(1997,3,17));
+        Atleta atleta2 = new Atleta("ChaoJun", "Chao", "China", LocalDate.of(1997,3,12));
         atletaRepository.save(atleta2);
         Atleta atleta3 = new Atleta("Raul", "Vazquez", "Italiano", LocalDate.of(1996, 12, 1));
         atletaRepository.save(atleta3);
 
     }
     public void testAtletas(){
-        System.out.println(atletaRepository.findByNacionalidad("Rusa"));
-        System.out.println(atletaRepository.findByFechaNacimientoDespues(LocalDate.of(1996, 12, 1)));
+        System.out.println(atletaRepository.findByNacionalidad("China"));
+        System.out.println(atletaRepository.findByFechaNacimientoDespues(LocalDate.of(1996, 12, 12)));
     }
 
 }
