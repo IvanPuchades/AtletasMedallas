@@ -19,8 +19,7 @@ public class Atleta {
     @OneToMany
     private Medalla medalla;
 
-    public Atleta(Long id, String nombre, String apellido, String nacionalidad, LocalDate fechaNacimiento) {
-        this.id = id;
+    public Atleta( String nombre, String apellido, String nacionalidad, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.nacionalidad = nacionalidad;
