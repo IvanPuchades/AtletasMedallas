@@ -13,30 +13,28 @@ public class Medalla {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private int enumeracion;
+    @Enumerated(EnumType.STRING)
+    private TipoMedalla tipoMedalla;
     private String especialidad;
     private String competicion;
 
+    //Constructor vacio
+    public Medalla() {
+    }
+
     //Constructor
     public Medalla(int enumeracion, String especialidad, String competicion) {
-        this.enumeracion = enumeracion;
+        this.tipoMedalla = tipoMedalla;
         this.especialidad = especialidad;
         this.competicion = competicion;
 
     }
-
-    public Medalla() {
-    }
-
     //Getters
-
     public long getId() {
         return id;
     }
 
-    public int getEnumeracion() {
-        return enumeracion;
-    }
+    public TipoMedalla getTipoMedalla() {return tipoMedalla; }
 
     public String getEspecialidad() {
         return especialidad;
@@ -54,9 +52,7 @@ public class Medalla {
         this.id = id;
     }
 
-    public void setEnumeracion(int enumeracion) {
-        this.enumeracion = enumeracion;
-    }
+    public void setTipoMedalla(TipoMedalla tipoMedalla) {this.tipoMedalla = tipoMedalla; }
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
@@ -66,13 +62,11 @@ public class Medalla {
         this.competicion = competicion;
     }
 
-
-
     @Override
     public String toString() {
         return "Medalla{" +
                 "id=" + id +
-                ", enumeracion=" + enumeracion +
+                ", tipoMedalla="+ tipoMedalla +
                 ", especialidad='" + especialidad + '\'' +
                 ", competicion='" + competicion + '\'' +
                 '}';
