@@ -35,12 +35,8 @@ public class AtletaController {
     //Creamos el R (Obtener(Retrieve)) del CRUD
     @GetMapping
     public List<Atleta> getTodosAtletas() {
-        List<Atleta> atletas = new ArrayList<>();
-        Iterator<Atleta> iterator = atletaRepository.findAll().iterator();
-        while(iterator.hasNext()){
-            atletas.add(iterator.next());
-        }
-        return atletas;
+
+        return atletaRepository.findAll();
     }
 
     //Creamos el U (Update) del CRUD
@@ -60,7 +56,7 @@ public class AtletaController {
     @GetMapping("/GroupByNacionalidad")
     public Map<String, List<Atleta>> getAtletaGroupByNacionalidad(){
         return atletaRepository.findAll().parallelStream()
-                .collect(groupingBy(atleta::getNacionalidad));
+                .collect(groupingBy(Atleta::getNacionalidad));
     }
 
 
